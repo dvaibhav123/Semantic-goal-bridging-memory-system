@@ -6,7 +6,7 @@ This document tracks all the goals you are currently working on.
 **Active goals:** 1
 
 ## Goal List
-1. **AI-Operating-System-for-PMs**: Transform the repo into an AI OS for PMs.
+1. **AI-Operating-System-for-PMs**: Self-improving AI OS for PMs that autonomously manages work prioritization and context.
   - [Status: Active]
   - [Priority: P0]
   - [Due: None]

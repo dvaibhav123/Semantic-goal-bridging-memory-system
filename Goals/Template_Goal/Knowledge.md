@@ -1,14 +1,16 @@
 # Goal Knowledge Base: [Goal Name]
 
 ## Goal Snapshot
-> **Bottom Line:** [Intent of the goal]
+> **Target Outcome:** [What specific result or change are we trying to achieve?]
+> **Success Metrics (KPIs):** [How will we measure success? e.g., < 50ms latency, 90% adoption]
+> **Definition of Done (DoD):** [Binary criteria for completion e.g., tests pass, docs updated]
 > **Key Decisions:**
 > - [Initial setup decisions]
 
 ## Context Map
-- ## Goal Snapshot (Line 3): [Brief context]
-- ## Context Map (Line 7): [Brief context]
-- ## Initial Requirements (Line 13): [Brief context]
+- ## Goal Snapshot (Line 3): Target outcomes and KPIs.
+- ## Context Map (Line 9): Index for targeted extraction.
+- ## Initial Requirements (Line 15): [Brief context]
 
 ---
 

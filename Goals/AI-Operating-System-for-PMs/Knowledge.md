@@ -1,24 +1,28 @@
 # Goal Knowledge Base: AI-Operating-System-for-PMs
 
 ## Goal Snapshot
-> **Bottom Line:** Transform the repository into a self-improving AI Operating System for Product Managers to handle task prioritization, meeting analysis, and day-to-day workflow management.
+> **Target Outcome:** Transform the repository into a self-improving AI Operating System for Product Managers that autonomously manages work prioritization and context.
+> **Success Metrics (KPIs):** 100% of meeting action items mapped to goals; < 5 mins for daily focus list generation; no manual context drift.
+> **Definition of Done (DoD):** Core skills (Meeting, Task, Knowledge) implemented; Goal schema metadata-rich; Outcome-driven templates active.
 > **Key Decisions:**
 > - Adopt SGBM (Semantic Goal-Bridging Memory) as the core memory architecture.
-> - **Architecture Layer 1 (Goal Schema):** Enhance `Goals.md` to track Status, Priority, Stakeholders, Due Date, Blocked By, Tags, and Last Review Date.
-> - **Architecture Layer 2 (Task Schema):** Implement granular, behavioral task tracking with distinct statuses in a dedicated `Tasks.md` file.
-> - **Meeting Processor:** Designed a dedicated agent skill to autonomously map meeting notes to action items and goals, gated by user confirmation.
-> - **Task Prioritizer:** Designed a skill to scan tasks, apply a strict P0-P3 priority matrix, resolve dependencies, and generate focus lists.
-> - **Knowledge Triage:** Implemented a mandatory triage protocol in the knowledge manager to classify incoming info as Knowledge, Action, or Both, ensuring no tasks are lost in text.
+> - **Architecture Layer 1 (Goal Schema):** Enhance `Goals.md` to track metadata and Target Outcomes.
+> - **Architecture Layer 2 (Task Schema):** Implement granular, behavioral task tracking in `Tasks.md`.
+> - **Meeting Processor:** Autonomously map meeting notes to action items and goals.
+> - **Task Prioritizer:** Auto-rank tasks via a P0-P3 priority matrix.
+> - **Knowledge Triage:** Mandatory classification of info as Knowledge, Action, or Both.
+> - **Outcome-Driven Goals:** Shift from output to outcome-focused goal definitions via a "PM Coach" gate.
 
 ## Context Map
-- ## Goal Snapshot (Line 3): High-level intent and initial decisions.
-- ## Context Map (Line 15): Index for targeted extraction.
+- ## Goal Snapshot (Line 3): Target outcomes, KPIs, and DoD.
+- ## Context Map (Line 14): Index for targeted extraction.
 - ## Initial Requirements (Line 23): User-defined goals for PM workflow.
 - ## Architecture - Goal Schema (Line 29): Defined metadata fields for goals.
 - ## Architecture - Task Schema (Line 39): Implementation of granular task management.
 - ## Meeting Note Analysis (Line 47): Strategy for processing meetings.
 - ## Task Prioritization (Line 55): Strategy for autonomous task ranking.
 - ## Knowledge Triage Protocol (Line 63): Strategy for routing info to knowledge vs. actions.
+- ## Outcome-Driven Goals (Line 71): Strategy for enforcing outcome-focused definitions.
 
 ---
 
@@ -30,6 +34,7 @@
 
 ## Architecture - Goal Schema
 To prevent `Goals.md` from becoming just a list, each goal entry will track:
+- **Target Outcome Statement**: Replaces the generic description in the index.
 - **Status:** (Active, Paused, Completed, Archived)
 - **Priority:** (P0, P1, P2, P3)
 - **Stakeholders:** People involved or impacted (default: User).
@@ -65,3 +70,9 @@ The `knowledge-manager` enforces a strict triage during the "Bubble Up" process:
 - **Classification**: All incoming data is classified as Knowledge (Context/Decisions), Action (Tasks), or Both.
 - **Routing**: Actions are promoted to `Tasks.md` and never stored only in `Knowledge.md`.
 - **User Confirmation**: All proposed Knowledge and Task updates are presented for approval before commit.
+
+## Outcome-Driven Goals
+The `goal-manager` ensures all goals are outcome-focused:
+- **PM Coach Gate**: The agent pushes back on output-focused requests (e.g., "build X") to extract the "Why" (Target Outcome) and "How" (KPIs).
+- **Snapshot Schema**: `Knowledge.md` must contain Target Outcome, Success Metrics (KPIs), and Definition of Done (DoD).
+- **Index Anchors**: The `Goals.md` index uses the Target Outcome statement as the primary identifier.
