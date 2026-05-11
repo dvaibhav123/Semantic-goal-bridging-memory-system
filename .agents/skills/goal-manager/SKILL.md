@@ -19,7 +19,8 @@ When invoked to create a new goal:
 1. Identify the name of the new goal. If the user hasn't provided a clear name, ask them for one.
 2. Create a new folder in the `Goals/` directory with the goal name.
 3. Inside the new folder, create:
-   - A `Progress.md` file with a template to track status, milestones, and daily execution notes.
+   - A `Progress.md` file with a template to track high-level milestones.
+   - A `Tasks.md` file with a markdown table for granular day-to-day behavioral tasks.
    - A `Knowledge.md` file using the **SGBM Template**:
      ```markdown
      # Knowledge: [Goal Name]
@@ -27,17 +28,26 @@ When invoked to create a new goal:
      ## Goal Snapshot
      > **Bottom Line:** [Intent of the goal]
      > **Key Decisions:** [Initial setup decisions]
-     > **Reusable Hooks:** []
 
      ## Context Map
      * - ## Goal Snapshot: (Line 3+)
-     * - ## Context Map: (Line 10+)
+     * - ## Context Map: (Line 7+)
 
      ---
-     ## Detailed Knowledge
+     ## Initial Requirements
      ```
    - A `bin/` folder for supporting execution files.
 4. Update the `Goals/Goals.md` file:
    - Add the new goal to the list and increment the counts.
-   - **Mandatory**: Append semantic tags directly underneath the goal using the format: `  - [Tags: #tag1, #tag2]`.
+   - **Mandatory**: Use the enriched metadata schema:
+     ```markdown
+     n. **[Goal Name]**: [Description]
+       - [Status: Active]
+       - [Priority: P1]
+       - [Due: None]
+       - [Stakeholders: User]
+       - [Blocked By: None]
+       - [Last Review: YYYY-MM-DD]
+       - [Tags: #tag1, #tag2]
+     ```
 5. Confirm with the user that the new goal has been set up with SGBM structures.

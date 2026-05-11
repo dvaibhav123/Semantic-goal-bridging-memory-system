@@ -1,6 +1,7 @@
-# Goal Progress Tracker
+# Goal Progress Tracker: [Goal Name]
 
-> This file tracks component-level progress. Update this when tasks are started or completed.
-> When a task is marked `[x]`, remember the "Bubble Up" rule: you must update `Knowledge.md` with the new deep knowledge, Context Map, and Goal Snapshot.
+> This file tracks high-level milestones. For granular, day-to-day behavioral tasks, use `Tasks.md`.
+> When a milestone is marked `[x]`, update `Knowledge.md` using the "Bubble Up" rule.
 
-- `[ ]` Define initial task
+- [ ] Define initial architectural components
+- [ ] Implement core module

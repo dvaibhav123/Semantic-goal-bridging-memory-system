@@ -1,15 +1,17 @@
-# Goal Knowledge Base
+# Goal Knowledge Base: [Goal Name]
 
 ## Goal Snapshot
-> **Bottom Line:** Describe what this goal is trying to achieve here.
+> **Bottom Line:** [Intent of the goal]
 > **Key Decisions:**
-> - List any major architectural or design decisions made so far here.
+> - [Initial setup decisions]
 
 ## Context Map
-> Map the rest of the file's headers to specific line numbers (e.g., `- ## API Specs (Line 50+)`). This is used for targeted reading.
-> 
+- ## Goal Snapshot (Line 3): [Brief context]
+- ## Context Map (Line 7): [Brief context]
+- ## Initial Requirements (Line 13): [Brief context]
 
 ---
 
-## Initial Context
-*(Add detailed notes, findings, and technical context below)*
+## Initial Requirements
+- [Requirement 1]
+- [Requirement 2]
