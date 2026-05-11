@@ -3,7 +3,7 @@
 ## Goal Snapshot
 > **Target Outcome:** Transform the repository into a self-improving AI Operating System for Product Managers that autonomously manages work prioritization and context.
 > **Success Metrics (KPIs):** 100% of meeting action items mapped to goals; < 5 mins for daily focus list generation; no manual context drift.
-> **Definition of Done (DoD):** Core skills (Meeting, Task, Knowledge) implemented; Goal schema metadata-rich; Outcome-driven templates active.
+> **Definition of Done (DoD):** Core skills (Meeting, Task, Knowledge) implemented; Goal schema metadata-rich; Outcome-driven templates active; Strategic Hook enabled.
 > **Key Decisions:**
 > - Adopt SGBM (Semantic Goal-Bridging Memory) as the core memory architecture.
 > - **Architecture Layer 1 (Goal Schema):** Enhance `Goals.md` to track metadata and Target Outcomes.
@@ -12,17 +12,19 @@
 > - **Task Prioritizer:** Auto-rank tasks via a P0-P3 priority matrix.
 > - **Knowledge Triage:** Mandatory classification of info as Knowledge, Action, or Both.
 > - **Outcome-Driven Goals:** Shift from output to outcome-focused goal definitions via a "PM Coach" gate.
+> - **Strategic Hook:** Enforced reading of `Strategic-Pillars.md` during Orientation to ensure high-level alignment.
 
 ## Context Map
 - ## Goal Snapshot (Line 3): Target outcomes, KPIs, and DoD.
-- ## Context Map (Line 14): Index for targeted extraction.
-- ## Initial Requirements (Line 23): User-defined goals for PM workflow.
-- ## Architecture - Goal Schema (Line 29): Defined metadata fields for goals.
-- ## Architecture - Task Schema (Line 39): Implementation of granular task management.
-- ## Meeting Note Analysis (Line 47): Strategy for processing meetings.
-- ## Task Prioritization (Line 55): Strategy for autonomous task ranking.
-- ## Knowledge Triage Protocol (Line 63): Strategy for routing info to knowledge vs. actions.
-- ## Outcome-Driven Goals (Line 71): Strategy for enforcing outcome-focused definitions.
+- ## Context Map (Line 15): Index for targeted extraction.
+- ## Initial Requirements (Line 24): User-defined goals for PM workflow.
+- ## Architecture - Goal Schema (Line 30): Defined metadata fields for goals.
+- ## Architecture - Task Schema (Line 40): Implementation of granular task management.
+- ## Meeting Note Analysis (Line 48): Strategy for processing meetings.
+- ## Task Prioritization (Line 56): Strategy for autonomous task ranking.
+- ## Knowledge Triage Protocol (Line 64): Strategy for routing info to knowledge vs. actions.
+- ## Outcome-Driven Goals (Line 72): Strategy for enforcing outcome-focused definitions.
+- ## Strategic Hook Pattern (Line 80): Strategy for always-on strategic alignment.
 
 ---
 
@@ -76,3 +78,9 @@ The `goal-manager` ensures all goals are outcome-focused:
 - **PM Coach Gate**: The agent pushes back on output-focused requests (e.g., "build X") to extract the "Why" (Target Outcome) and "How" (KPIs).
 - **Snapshot Schema**: `Knowledge.md` must contain Target Outcome, Success Metrics (KPIs), and Definition of Done (DoD).
 - **Index Anchors**: The `Goals.md` index uses the Target Outcome statement as the primary identifier.
+
+## Strategic Hook Pattern
+Inspired by DEX, the OS implements a "Strategic Hook" to prevent strategic drift:
+- **Orientation Protocol**: The agent is programmatically forced to read `Goals/Strategic-Pillars.md` at the start of every session.
+- **Always-On Context**: High-level pillars (e.g., Q2 objectives) are injected before any granular task analysis occurs.
+- **Weighting**: The `task-prioritizer` uses these pillars to weight P0/P1 tasks based on their alignment with the long-term North Star.
