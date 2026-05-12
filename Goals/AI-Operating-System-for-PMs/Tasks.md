@@ -13,3 +13,4 @@
 | ^t-AIOS-9 | Done | High | Implement Deterministic Integrity (Unique Task IDs) | None |
 | ^t-AIOS-10 | Done | High | Define and implement Chief of Staff role | None |
 | ^t-AIOS-11 | Done | High | Define and implement Systems Architect role | None |
+| ^t-AIOS-12 | Done | High | Consolidate and link Dual-Core Kernel Instructions | None |

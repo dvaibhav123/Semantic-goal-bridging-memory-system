@@ -3,7 +3,7 @@
 ## Goal Snapshot
 > **Target Outcome:** Transform the repository into a self-improving AI Operating System for Product Managers that autonomously manages work prioritization and context via a role-driven architecture.
 > **Success Metrics (KPIs):** 100% of meeting action items mapped to goals; < 5 mins for daily focus list generation; no manual context drift; 100% of tasks assigned unique ^t-IDs.
-> **Definition of Done (DoD):** Core skills (Meeting, Task, Knowledge) implemented; Role-driven architecture (CoS, Architect) defined; SGBM protocols fully automated.
+> **Definition of Done (DoD):** Core skills (Meeting, Task, Knowledge) implemented; Role-driven architecture (CoS, Architect) defined; OS Kernel (GEMINI.md) unified and linked.
 > **Key Decisions:**
 > - Adopt SGBM (Semantic Goal-Bridging Memory) as the core memory architecture.
 > - **Architecture Layer 1 (Goal Schema):** Enhance `Goals.md` to track metadata and Target Outcomes.
@@ -15,20 +15,22 @@
 > - **Strategic Hook:** Enforced reading of `Strategic-Pillars.md` during Orientation to ensure high-level alignment.
 > - **Deterministic Integrity:** Enforced use of persistent Task IDs (`^t-AIOS-1`) to prevent state drift.
 > - **Role-Driven Architecture:** Split agent logic into specialized personas (Chief of Staff, Architect) to prevent context contamination.
+> - **OS Kernel Linkage:** Consolidated all logic into `GEMINI.md` and enforced the "Bookend" orchestration protocol for turn-by-turn role switching.
 
 ## Context Map
 - ## Goal Snapshot (Line 3): Target outcomes, KPIs, and DoD.
 - ## Context Map (Line 16): Index for targeted extraction.
-- ## Initial Requirements (Line 25): User-defined goals for PM workflow.
-- ## Architecture - Goal Schema (Line 31): Defined metadata fields for goals.
-- ## Architecture - Task Schema (Line 41): Implementation of granular task management.
-- ## Meeting Note Analysis (Line 49): Strategy for processing meetings.
-- ## Task Prioritization (Line 57): Strategy for autonomous task ranking.
-- ## Knowledge Triage Protocol (Line 65): Strategy for routing info to knowledge vs. actions.
-- ## Outcome-Driven Goals (Line 73): Strategy for enforcing outcome-focused definitions.
-- ## Strategic Hook Pattern (Line 81): Strategy for always-on strategic alignment.
-- ## Deterministic Integrity (Line 89): Strategy for unique, persistent task IDs.
-- ## Role-Driven Architecture (Line 97): Strategy for specialized agent personas.
+- ## Initial Requirements (Line 26): User-defined goals for PM workflow.
+- ## Architecture - Goal Schema (Line 32): Defined metadata fields for goals.
+- ## Architecture - Task Schema (Line 42): Implementation of granular task management.
+- ## Meeting Note Analysis (Line 50): Strategy for processing meetings.
+- ## Task Prioritization (Line 58): Strategy for autonomous task ranking.
+- ## Knowledge Triage Protocol (Line 66): Strategy for routing info to knowledge vs. actions.
+- ## Outcome-Driven Goals (Line 74): Strategy for enforcing outcome-focused definitions.
+- ## Strategic Hook Pattern (Line 82): Strategy for always-on strategic alignment.
+- ## Deterministic Integrity (Line 90): Strategy for unique, persistent task IDs.
+- ## Role-Driven Architecture (Line 98): Strategy for specialized agent personas.
+- ## OS Kernel Linkage (Line 106): Strategy for unified instruction and orchestration logic.
 
 ---
 
@@ -99,3 +101,9 @@ To ensure rock-solid state management, the OS enforces unique, persistent IDs:
 The OS utilizes specialized agent personas to manage context and execution:
 - **Chief of Staff (CoS)**: The ruthless executor. Manages tactical noise, enforces memory hygiene, and executes daily tasks within established domains.
 - **Systems Architect**: The strategic designer. Optimizes the OS, implements new skills, audits performance logs for systemic friction, and ensures 100% alignment with `Strategic-Pillars.md`. Acts as the "PM Coach" and the mandatory orchestrator bookending every session turn.
+
+## OS Kernel Linkage
+To ensure programmatic consistency, all agent logic is unified in `GEMINI.md`:
+- **Central Kernel**: `GEMINI.md` defines the Dual-Core engine and consolidated SGBM memory protocols.
+- **Bookend Orchestration**: Mandates that every session turn starts in Architect Mode (Framing), executes in CoS Mode (Tactical), and ends in Architect Mode (Validation).
+- **Role Enforcement**: Agents are programmatically directed to their respective role files in `.agents/roles/` for behavioral guardrails.
