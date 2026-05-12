@@ -12,19 +12,19 @@ Use this skill when the user wants to prioritize their workload, generate a focu
 1. **Scan and Unify**:
    - Read the master index (`Goals/Goals.md`) to identify all Active goals.
    - For each active goal, read its `Tasks.md` file.
-   - Compile a unified list of all tasks including properties: Goal, ID, Task Description, Status, Priority, Due Date (if any), and Dependencies (Blocked By).
+   - Compile a unified list of all tasks including properties: Goal, ID (must follow `^t-[Goal-Acronym]-[Number]`), Task Description, Status, Priority, Due Date (if any), and Dependencies (using `^t-IDs`).
 
 2. **Apply Priority Matrix**:
    Evaluate and automatically re-rank the tasks based on the following matrix:
-   - **P0 (Critical)**: Overdue AND blocks downstream tasks.
+   - **P0 (Critical)**: Overdue AND blocks downstream tasks (check `^t-ID` dependencies).
    - **P1 (High)**: Due this week AND has no blockers.
    - **P2 (Medium)**: Due next week.
    - **P3 (Backlog)**: All other tasks (no immediate due date, or blocked by non-stale tasks).
 
 3. **Dependency Conflict Resolution**:
-   Analyze the unified task list for dependency issues:
-   - **Circular Blockers**: Task A blocks Task B, and Task B blocks Task A.
-   - **Stale Blockers**: A task is blocked by a task that hasn't seen progress recently or doesn't exist.
+   Analyze the unified task list for dependency issues using `^t-IDs`:
+   - **Circular Blockers**: Task ^t-A blocks Task ^t-B, and Task ^t-B blocks Task ^t-A.
+   - **Stale Blockers**: A task is blocked by a `^t-ID` that hasn't seen progress recently or doesn't exist.
    - *Agent Autonomy & Confirmation*: Flag these conflicts. If the resolution is obvious, draft a proposed fix. If enough information is not available to resolve the conflict safely, you MUST present the conflict and ask the user for clarification.
 
 4. **Output Generation**:

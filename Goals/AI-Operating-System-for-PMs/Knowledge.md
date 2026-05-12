@@ -1,30 +1,34 @@
 # Goal Knowledge Base: AI-Operating-System-for-PMs
 
 ## Goal Snapshot
-> **Target Outcome:** Transform the repository into a self-improving AI Operating System for Product Managers that autonomously manages work prioritization and context.
-> **Success Metrics (KPIs):** 100% of meeting action items mapped to goals; < 5 mins for daily focus list generation; no manual context drift.
-> **Definition of Done (DoD):** Core skills (Meeting, Task, Knowledge) implemented; Goal schema metadata-rich; Outcome-driven templates active; Strategic Hook enabled.
+> **Target Outcome:** Transform the repository into a self-improving AI Operating System for Product Managers that autonomously manages work prioritization and context via a role-driven architecture.
+> **Success Metrics (KPIs):** 100% of meeting action items mapped to goals; < 5 mins for daily focus list generation; no manual context drift; 100% of tasks assigned unique ^t-IDs.
+> **Definition of Done (DoD):** Core skills (Meeting, Task, Knowledge) implemented; Role-driven architecture (CoS, Architect) defined; SGBM protocols fully automated.
 > **Key Decisions:**
 > - Adopt SGBM (Semantic Goal-Bridging Memory) as the core memory architecture.
 > - **Architecture Layer 1 (Goal Schema):** Enhance `Goals.md` to track metadata and Target Outcomes.
-> - **Architecture Layer 2 (Task Schema):** Implement granular, behavioral task tracking in `Tasks.md`.
+> - **Architecture Layer 2 (Task Schema):** Implement granular, behavioral task tracking in `Tasks.md` with unique `^t-IDs`.
 > - **Meeting Processor:** Autonomously map meeting notes to action items and goals.
 > - **Task Prioritizer:** Auto-rank tasks via a P0-P3 priority matrix.
 > - **Knowledge Triage:** Mandatory classification of info as Knowledge, Action, or Both.
 > - **Outcome-Driven Goals:** Shift from output to outcome-focused goal definitions via a "PM Coach" gate.
 > - **Strategic Hook:** Enforced reading of `Strategic-Pillars.md` during Orientation to ensure high-level alignment.
+> - **Deterministic Integrity:** Enforced use of persistent Task IDs (`^t-AIOS-1`) to prevent state drift.
+> - **Role-Driven Architecture:** Split agent logic into specialized personas (Chief of Staff, Architect) to prevent context contamination.
 
 ## Context Map
 - ## Goal Snapshot (Line 3): Target outcomes, KPIs, and DoD.
-- ## Context Map (Line 15): Index for targeted extraction.
-- ## Initial Requirements (Line 24): User-defined goals for PM workflow.
-- ## Architecture - Goal Schema (Line 30): Defined metadata fields for goals.
-- ## Architecture - Task Schema (Line 40): Implementation of granular task management.
-- ## Meeting Note Analysis (Line 48): Strategy for processing meetings.
-- ## Task Prioritization (Line 56): Strategy for autonomous task ranking.
-- ## Knowledge Triage Protocol (Line 64): Strategy for routing info to knowledge vs. actions.
-- ## Outcome-Driven Goals (Line 72): Strategy for enforcing outcome-focused definitions.
-- ## Strategic Hook Pattern (Line 80): Strategy for always-on strategic alignment.
+- ## Context Map (Line 16): Index for targeted extraction.
+- ## Initial Requirements (Line 25): User-defined goals for PM workflow.
+- ## Architecture - Goal Schema (Line 31): Defined metadata fields for goals.
+- ## Architecture - Task Schema (Line 41): Implementation of granular task management.
+- ## Meeting Note Analysis (Line 49): Strategy for processing meetings.
+- ## Task Prioritization (Line 57): Strategy for autonomous task ranking.
+- ## Knowledge Triage Protocol (Line 65): Strategy for routing info to knowledge vs. actions.
+- ## Outcome-Driven Goals (Line 73): Strategy for enforcing outcome-focused definitions.
+- ## Strategic Hook Pattern (Line 81): Strategy for always-on strategic alignment.
+- ## Deterministic Integrity (Line 89): Strategy for unique, persistent task IDs.
+- ## Role-Driven Architecture (Line 97): Strategy for specialized agent personas.
 
 ---
 
@@ -47,11 +51,11 @@ To prevent `Goals.md` from becoming just a list, each goal entry will track:
 
 ## Architecture - Task Schema
 Granular tasks are stored in `Tasks.md` using a structured table for behavioral tracking:
-- **ID:** Unique identifier (e.g., T1, T2).
+- **ID:** Unique identifier using the `^t-[Goal-Acronym]-[Number]` syntax (e.g., `^t-AIOS-1`).
 - **Status:** (Todo, In Progress, Blocked, Done, Dropped).
 - **Priority:** (High, Med, Low).
 - **Description:** Actionable task definition.
-- **Dependencies:** Blockers or prerequisite tasks.
+- **Dependencies:** Blockers or prerequisite tasks (using `^t-IDs`).
 
 ## Meeting Note Analysis
 The system processes meeting notes via the `meeting-processor` skill:
@@ -84,3 +88,14 @@ Inspired by DEX, the OS implements a "Strategic Hook" to prevent strategic drift
 - **Orientation Protocol**: The agent is programmatically forced to read `Goals/Strategic-Pillars.md` at the start of every session.
 - **Always-On Context**: High-level pillars (e.g., Q2 objectives) are injected before any granular task analysis occurs.
 - **Weighting**: The `task-prioritizer` uses these pillars to weight P0/P1 tasks based on their alignment with the long-term North Star.
+
+## Deterministic Integrity
+To ensure rock-solid state management, the OS enforces unique, persistent IDs:
+- **ID Syntax**: `^t-[Goal-Acronym]-[Number]`.
+- **Referential Integrity**: All task references in `Progress.md`, focus lists, and "Blocked By" columns must use the `^t-ID`.
+- **State Persistence**: Task IDs never change, even if description or status is updated, ensuring the agent never "loses" a task.
+
+## Role-Driven Architecture
+The OS utilizes specialized agent personas to manage context and execution:
+- **Chief of Staff (CoS)**: The ruthless executor. Manages tactical noise, enforces memory hygiene, and executes daily tasks within established domains.
+- **Systems Architect**: The strategic designer. Optimizes the OS, implements new skills, audits performance logs for systemic friction, and ensures 100% alignment with `Strategic-Pillars.md`. Acts as the "PM Coach" and the mandatory orchestrator bookending every session turn.

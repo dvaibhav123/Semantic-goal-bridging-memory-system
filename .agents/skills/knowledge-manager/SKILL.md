@@ -15,8 +15,8 @@ Use this skill whenever there is new important context, architectural decisions,
 1. **Identify the Goal**: Ensure you know which Goal this knowledge belongs to. If unsure, refer to `Goals/Goals.md`.
 2. **Mandatory Triage**: Classify each piece of incoming information:
    - **Knowledge Only (Decisions, Constraints, Context)**: Route to `Knowledge.md`.
-   - **Action Only (Tasks, To-Dos, Follow-ups)**: Route to `Tasks.md`. Draft a new task following the Layer 2 schema.
-   - **Both (Decision implying a Task)**: Route context to `Knowledge.md` AND draft a task in `Tasks.md`.
+   - **Action Only (Tasks, To-Dos, Follow-ups)**: Route to `Tasks.md`. Draft a new task following the Layer 2 schema, assigning a persistent `^t-[Goal-Acronym]-[Number]` ID.
+   - **Both (Decision implying a Task)**: Route context to `Knowledge.md` AND draft a task in `Tasks.md` with a `^t-ID`.
    - **Rule**: NEVER persist an action item solely in `Knowledge.md`. It must be promoted to the task tracking system.
 3. **Locate & Read Files**: 
    - For Knowledge: Read ONLY the `## Goal Snapshot` and `## Context Map` of `Knowledge.md` first.

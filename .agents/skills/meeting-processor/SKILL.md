@@ -13,6 +13,7 @@ Use this skill when the user provides meeting notes (structured or unstructured)
 ## Execution Steps
 
 1. **Analyze and Extract**: Analyze the provided meeting notes to extract all action items. For each action item, determine:
+   - **ID**: Assign a persistent, unique ID using the syntax `^t-[Goal-Acronym]-[Number]`.
    - **Owner**: Who is responsible (default to User if unstated).
    - **Action**: What needs to be done.
    - **Due Date**: When it needs to be completed (if mentioned).

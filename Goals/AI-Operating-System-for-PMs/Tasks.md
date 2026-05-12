@@ -2,12 +2,14 @@
 
 | ID | Status | Priority | Task Description | Dependencies |
 |---|---|---|---|---|
-| T1 | Done | High | Define Status ENUMs for Goals | None |
-| T2 | Done | High | Update Goals.md with new metadata schema | None |
-| T3 | Done | Med | Update Template_Goal structure | None |
-| T4 | Done | Med | Design meeting note analysis schema | None |
-| T5 | Done | High | Design task prioritizer matrix and skill | None |
-| T6 | Done | High | Implement mandatory triage in knowledge manager | None |
-| T7 | Done | High | Implement outcome-driven goal framework | None |
-| T8 | Done | High | Implement Strategic Pillars hook | None |
-
+| ^t-AIOS-1 | Done | High | Define Status ENUMs for Goals | None |
+| ^t-AIOS-2 | Done | High | Update Goals.md with new metadata schema | None |
+| ^t-AIOS-3 | Done | Med | Update Template_Goal structure | None |
+| ^t-AIOS-4 | Done | Med | Design meeting note analysis schema | None |
+| ^t-AIOS-5 | Done | High | Design task prioritizer matrix and skill | None |
+| ^t-AIOS-6 | Done | High | Implement mandatory triage in knowledge manager | None |
+| ^t-AIOS-7 | Done | High | Implement outcome-driven goal framework | None |
+| ^t-AIOS-8 | Done | High | Implement Strategic Pillars hook | None |
+| ^t-AIOS-9 | Done | High | Implement Deterministic Integrity (Unique Task IDs) | None |
+| ^t-AIOS-10 | Done | High | Define and implement Chief of Staff role | None |
+| ^t-AIOS-11 | Done | High | Define and implement Systems Architect role | None |

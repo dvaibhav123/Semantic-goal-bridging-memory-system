@@ -2,4 +2,4 @@
 
 | ID | Status | Priority | Task Description | Dependencies |
 |---|---|---|---|---|
-| T1 | Todo | High | [Example Task] | None |
+| ^t-GOAL-1 | Todo | High | [Example Task] | None |
