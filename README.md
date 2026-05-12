@@ -98,4 +98,24 @@ To make the system bulletproof, bind the Python scripts to your environment's li
 6. *Implements Dashboard Auth perfectly matching the legacy system, using only 500 tokens of context.*
 
 ---
+
+## 🔄 Maintenance & Updates
+
+To ensure the SGBM system stays healthy as your project grows, follow these maintenance protocols:
+
+### 1. The Release Log (`RELEASES.md`)
+When updating the SGBM core (scripts, skills, or protocols), document the changes in `RELEASES.md`. This allows other agents or collaborators to safely "patch" their local SGBM folders by following the **Integration Instructions** provided in each release entry.
+
+### 2. Agent Handover & System Context
+When a new agent (or a new session) initializes this workspace, it MUST verify the current system health:
+- **Integration Checklist**:
+    1. Check `.agents/bin/` for core scripts.
+    2. Review `RELEASES.md` for the current protocol version.
+    3. Verify `Goals/Goals.md` for active goal alignment.
+- **Maintenance State**:
+    - **Current Blocker**: [None]
+    - **Planned Updates**: Logic for automated `sgbm-validator.py` cross-checks.
+    - **Environment**: Python 3.x required for `.agents/bin/` scripts.
+
+---
 *Built for developers who want their AI agents to remember the 'Why', not just the 'What'.*
