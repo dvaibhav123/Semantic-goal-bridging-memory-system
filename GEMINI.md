@@ -15,10 +15,14 @@ Every user interaction turn MUST follow this sequence to ensure strategic integr
    - Analyze user intent. Set "Mission Parameters" (Constraints, Priorities, SGBM Rules).
 2. **Phase 2: Execution (Chief of Staff Mode)**
    - Perform the tactical work utilizing Authorized Skills.
+   - **Feedback Rule**: If ambiguity, tool failure, or user rejection occurs, log the event to `.agents/memory/Friction-Log.md` with status `Pending`.
    - Enforce Deterministic Integrity (`^t-ID`) and the User Confirmation Gate.
 3. **Phase 3: Validation (Architect Mode)**
    - Audit the results against the Strategic Pillars.
    - Perform the **"Bubble Up"** protocol to synchronize `Knowledge.md`, `Progress.md`, and `Tasks.md`.
+
+## 3. Feedback Loop Ritual
+- **The Audit Protocol**: Every 3-5 sessions, or when requested via `/audit`, the Systems Architect MUST run the `system-optimizer` skill to synthesize pending friction into permanent system improvements.
 
 ## 3. Memory Protocol (SGBM)
 1. **Orientation:** On your first turn of a session, read `Goals/Strategic-Pillars.md` AND `Goals/Goals.md`.

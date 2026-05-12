@@ -14,3 +14,4 @@
 | ^t-AIOS-10 | Done | High | Define and implement Chief of Staff role | None |
 | ^t-AIOS-11 | Done | High | Define and implement Systems Architect role | None |
 | ^t-AIOS-12 | Done | High | Consolidate and link Dual-Core Kernel Instructions | None |
+| ^t-AIOS-13 | Done | High | Implement Self-Improvement Loop | None |

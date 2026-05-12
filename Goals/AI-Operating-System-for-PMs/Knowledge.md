@@ -1,9 +1,9 @@
 # Goal Knowledge Base: AI-Operating-System-for-PMs
 
 ## Goal Snapshot
-> **Target Outcome:** Transform the repository into a self-improving AI Operating System for Product Managers that autonomously manages work prioritization and context via a role-driven architecture.
-> **Success Metrics (KPIs):** 100% of meeting action items mapped to goals; < 5 mins for daily focus list generation; no manual context drift; 100% of tasks assigned unique ^t-IDs.
-> **Definition of Done (DoD):** Core skills (Meeting, Task, Knowledge) implemented; Role-driven architecture (CoS, Architect) defined; OS Kernel (GEMINI.md) unified and linked.
+> **Target Outcome:** Transform the repository into a self-improving AI Operating System for Product Managers that autonomously manages work prioritization and context via a role-driven architecture and persistent feedback loops.
+> **Success Metrics (KPIs):** 100% of meeting action items mapped to goals; < 5 mins for daily focus list generation; no manual context drift; 100% of tasks assigned unique ^t-IDs; 100% of operational friction resolved via Architect audits.
+> **Definition of Done (DoD):** Core skills (Meeting, Task, Knowledge, Optimizer) implemented; Role-driven architecture (CoS, Architect) defined; OS Kernel (GEMINI.md) unified; Self-improvement logs active.
 > **Key Decisions:**
 > - Adopt SGBM (Semantic Goal-Bridging Memory) as the core memory architecture.
 > - **Architecture Layer 1 (Goal Schema):** Enhance `Goals.md` to track metadata and Target Outcomes.
@@ -16,21 +16,23 @@
 > - **Deterministic Integrity:** Enforced use of persistent Task IDs (`^t-AIOS-1`) to prevent state drift.
 > - **Role-Driven Architecture:** Split agent logic into specialized personas (Chief of Staff, Architect) to prevent context contamination.
 > - **OS Kernel Linkage:** Consolidated all logic into `GEMINI.md` and enforced the "Bookend" orchestration protocol for turn-by-turn role switching.
+> - **Self-Improvement Loop:** Established stateful friction tracking and historical improvement logs to evolve the OS autonomously.
 
 ## Context Map
 - ## Goal Snapshot (Line 3): Target outcomes, KPIs, and DoD.
 - ## Context Map (Line 16): Index for targeted extraction.
-- ## Initial Requirements (Line 26): User-defined goals for PM workflow.
-- ## Architecture - Goal Schema (Line 32): Defined metadata fields for goals.
-- ## Architecture - Task Schema (Line 42): Implementation of granular task management.
-- ## Meeting Note Analysis (Line 50): Strategy for processing meetings.
-- ## Task Prioritization (Line 58): Strategy for autonomous task ranking.
-- ## Knowledge Triage Protocol (Line 66): Strategy for routing info to knowledge vs. actions.
-- ## Outcome-Driven Goals (Line 74): Strategy for enforcing outcome-focused definitions.
-- ## Strategic Hook Pattern (Line 82): Strategy for always-on strategic alignment.
-- ## Deterministic Integrity (Line 90): Strategy for unique, persistent task IDs.
-- ## Role-Driven Architecture (Line 98): Strategy for specialized agent personas.
-- ## OS Kernel Linkage (Line 106): Strategy for unified instruction and orchestration logic.
+- ## Initial Requirements (Line 27): User-defined goals for PM workflow.
+- ## Architecture - Goal Schema (Line 33): Defined metadata fields for goals.
+- ## Architecture - Task Schema (Line 43): Implementation of granular task management.
+- ## Meeting Note Analysis (Line 51): Strategy for processing meetings.
+- ## Task Prioritization (Line 59): Strategy for autonomous task ranking.
+- ## Knowledge Triage Protocol (Line 67): Strategy for routing info to knowledge vs. actions.
+- ## Outcome-Driven Goals (Line 75): Strategy for enforcing outcome-focused definitions.
+- ## Strategic Hook Pattern (Line 83): Strategy for always-on strategic alignment.
+- ## Deterministic Integrity (Line 91): Strategy for unique, persistent task IDs.
+- ## Role-Driven Architecture (Line 99): Strategy for specialized agent personas.
+- ## OS Kernel Linkage (Line 107): Strategy for unified instruction and orchestration logic.
+- ## Self-Improvement Loop (Line 115): Strategy for autonomous system evolution.
 
 ---
 
