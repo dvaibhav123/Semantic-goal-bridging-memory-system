@@ -2,6 +2,18 @@
 
 This file tracks all updates to the Semantic Goal Management (SGM) system. Use this to integrate updates into existing project folders.
 
+## [1.2.0] - 2026-05-12
+### Added
+- **Global Reasoning & Formatting Mandates**: Created `.agents/Reasoning-Mandates.md` to enforce rigorous critical thinking, 3-4 line paragraph limits, high information density, and ASCII diagram requirements.
+- **Kernel Reference**: Updated `GEMINI.md` (Section 6) to link all active personas to these mandates while keeping the core kernel lightweight.
+
+### Integration Instructions
+To update your local system to v1.2.0:
+1. Copy `.agents/Reasoning-Mandates.md` to your `.agents/` directory.
+2. Update your `GEMINI.md` to include Section 6 ("Standard Reasoning & Formatting").
+
+---
+
 ## [1.1.1] - 2026-05-12
 ### Fixed
 - **Architectural Violation**: Patched `product-brief` skill. It now strictly requires the use of `codebase_investigator` for context gathering and `goal-manager` to ensure proper SGBM folder initialization before spec drafting.

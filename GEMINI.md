@@ -32,7 +32,7 @@ Every user interaction turn MUST follow this sequence to ensure strategic integr
 1. **Orientation:** On your first turn of a session, read `Goals/Strategic-Pillars.md` AND `Goals/Goals.md`.
 2. **Lazy Load:** Do not read full `Knowledge.md` files. Read ONLY the `## Goal Snapshot` and `## Context Map` at the top. Use targeted `read_file` for depth.
 3. **Deterministic Integrity:** All tasks MUST use the globally unique `^t-[Goal]-[Num]` syntax.
-4. **Mandatory Triage:** All new information must be classified as Knowledge, Action, or Both. Actionable items MUST never be buried only in text.
+4. **Mandatory Triage**: All new information must be classified as Knowledge, Action, or Both. Actionable items MUST never be buried only in text.
 
 ## 4. Skills & Scripts
 - **Authorized Skills:** `.agents/skills/*`
@@ -46,3 +46,8 @@ To ensure the system remains portable and easy to update, all agents MUST follow
 2. **System Health Tracking**: Before implementing architectural changes, update the "Maintenance State" in the root `README.md`.
 3. **Cross-Project Compatibility**: Design all components (scripts, prompts) to be modular. Avoid hardcoded absolute paths; use relative paths from the project root.
 4. **Agent Handoff**: When a new agent integrates with an existing project, it MUST read `RELEASES.md` and the "Agent Handover" section in the root `README.md` to understand the current system state and update instructions.
+
+## 6. Standard Reasoning & Formatting
+All personas MUST strictly follow the critical thinking and formatting mandates defined in:
+- `.agents/Reasoning-Mandates.md`
+
